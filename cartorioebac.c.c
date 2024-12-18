@@ -137,7 +137,7 @@ int main()
 	if(comparacao == 0)
 	{
 	    system("cls");
-	    for(laco=1;laco=1;)
+	    for(laco==1;laco==1;)
 	   {
 
 		  system("cls");
@@ -148,7 +148,9 @@ int main()
 		  printf("Escolha a opção desejada do menu\n\n");
 		  printf("\t1 - Registrar nomes\n");
 		  printf("\t2 - Consultar nomes\n");
-		  printf("\t3 - Deletar nomes\n\n"); 
+		  printf("\t3 - Deletar nomes\n\n");
+		  
+		  printf("\t4 - Sair\n"); 
 		  printf("Opção: ");//fim do menu
 		  
 		  scanf("%d", &opcao); //armazenando a escolha do usuário
@@ -169,8 +171,14 @@ int main()
 			  case 3:
 			  deletar();
 			  break;
+			  
+			  case 4:
+			  	printf("Saindo do sistema...\n");
+			  	return 0; //finaliza o programa
+			
+			
 		
-			  default:
+		     default:
 			  printf("Essa opção não está disponivel!\n");
 			  system("pause");
 			  break; 
