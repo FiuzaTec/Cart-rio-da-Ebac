@@ -10,6 +10,10 @@ int registro()
 	char nome[40];
 	char sobrenome[40];
 	char cargo[40];
+	int continuar =1; //Variável para controlar o loop de repetição
+
+do 
+   {
 
 	printf("Digite o CPF a ser cadastrado: ");
 	scanf("%s", cpf);
@@ -54,9 +58,17 @@ int registro()
 	fprintf(file,cargo);
 	fclose(file);
 
+	printf("\nDeseja cadastrar outro usuário?  (1-sim, 0-não)");
+	scanf("%d", &continuar);
+	system("cls"); //Limpa a tela após cada registro
+}
+    
+while (continuar == 1); //Continua até o usuário escolher não continuar o cadatro
+   
+    printf("Voltando ao menu inicial....");	
     system("pause");
     
- 
+    return 0;
 }
 
 
